@@ -508,6 +508,39 @@
               }
             }
           ]
+        },
+        {
+          "id": "neoforge-mod-cmVxdWlyZWQvb3Blbi1wYXJ0aWVzLWFuZC1jbGFpbXMtbmVvZm9yZ2UtMS4yMS4xLTAuMzMuMC5qYXI",
+          "name": "open-parties-and-claims-neoforge-1.21.1-0.33.0",
+          "type": "File",
+          "artifact": {
+            "size": 1903256,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/required/open-parties-and-claims-neoforge-1.21.1-0.33.0.jar",
+            "MD5": "ac0441ce054b0c07cd76515283f7eab4",
+            "path": "neoforge-mods/required/open-parties-and-claims-neoforge-1.21.1-0.33.0.jar"
+          }
+        },
+        {
+          "id": "neoforge-mod-cmVxdWlyZWQveGFlcm9taW5pbWFwLWZvcmdlLTI2LjMtMjYuNi4yLmphcg",
+          "name": "xaerominimap-forge-26.3-26.6.2",
+          "type": "File",
+          "artifact": {
+            "size": 2180990,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/required/xaerominimap-forge-26.3-26.6.2.jar",
+            "MD5": "016944390f543ee0db928504a3b8a7bf",
+            "path": "neoforge-mods/required/xaerominimap-forge-26.3-26.6.2.jar"
+          }
+        },
+        {
+          "id": "neoforge-mod-cmVxdWlyZWQveGFlcm93b3JsZG1hcC1uZW9mb3JnZS0xLjIxLjEtMS40Ny4wLmphcg",
+          "name": "xaeroworldmap-neoforge-1.21.1-1.47.0",
+          "type": "File",
+          "artifact": {
+            "size": 1427078,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/required/xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
+            "MD5": "2a41efd48f6503926b089a00e624f1d0",
+            "path": "neoforge-mods/required/xaeroworldmap-neoforge-1.21.1-1.47.0.jar"
+          }
         }
       ]
     }
