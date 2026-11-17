@@ -27,6 +27,12 @@ export function getDefaultServerMeta(id, version, options) {
             version: options.fabricVersion
         };
     }
+    if (options?.neoForgeVersion) {
+        servMeta.meta.description = `${servMeta.meta.description} (NeoForge v${options.neoForgeVersion})`;
+        servMeta.neoforge = {
+            version: options.neoForgeVersion
+        };
+    }
     // Add empty untracked files.
     servMeta.untrackedFiles = [];
     return servMeta;

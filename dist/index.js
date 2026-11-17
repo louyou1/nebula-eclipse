@@ -164,12 +164,18 @@ const generateServerCommand = {
             describe: 'Fabric version.',
             type: 'string'
         })
-            .conflicts('forge', 'fabric');
+            .option('neoforge', {
+            describe: 'NeoForge version.',
+            type: 'string'
+        })
+            .conflicts('forge', 'fabric')
+            .conflicts('forge', 'neoforge')
+            .conflicts('fabric', 'neoforge');
     },
     handler: async (argv) => {
         argv.root = getRoot();
         logger.debug(`Root set to ${argv.root}`);
-        logger.debug(`Generating server ${argv.id} for Minecraft ${argv.version}.`, `\n\t└ Forge version: ${argv.forge}`, `\n\t└ Fabric version: ${argv.fabric}`);
+        logger.debug(`Generating server ${argv.id} for Minecraft ${argv.version}.`, `\n\t└ Forge version: ${argv.forge}`, `\n\t└ Fabric version: ${argv.fabric}`, `\n\t└ NeoForge version: ${argv.neoforge}`);
         const minecraftVersion = new MinecraftVersion(argv.version);
         if (argv.forge != null) {
             if (VersionUtil.isPromotionVersion(argv.forge)) {
@@ -184,7 +190,7 @@ const generateServerCommand = {
                 logger.error('┃                                                         ┃');
                 logger.error('┃    Forge 1.20.3+ removed support for --fml.modLists.    ┃');
                 logger.error('┃  Helios Launcher can no longer load mods through Forge. ┃');
-                logger.error('┃      Please use Fabric or await NeoForged Support.      ┃');
+                logger.error('┃     Configure this version with the --neoforge option.    ┃');
                 logger.error('┃                                                         ┃');
                 logger.error('┃                     !!  WARNING !!                      ┃');
                 logger.error('┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛');
@@ -201,7 +207,8 @@ const generateServerCommand = {
         const serverStruct = new ServerStructure(argv.root, getBaseURL(), false, false);
         await serverStruct.createServer(argv.id, minecraftVersion, {
             forgeVersion: argv.forge,
-            fabricVersion: argv.fabric
+            fabricVersion: argv.fabric,
+            neoForgeVersion: argv.neoforge
         });
     }
 };

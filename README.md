@@ -97,7 +97,7 @@ __*SubCommands*__
 
 #### Generate Server
 
-Generate an new server in the root directory. Options are provided to include forge in the generated server.
+Generate an new server in the root directory. Options are provided to include Forge, Fabric, or NeoForge in the generated server.
 
 `generate server <id> <version> <options>`
 
@@ -111,14 +111,20 @@ Options:
   * OPTIONAL (default: null)
   * If not provided fabric will not be enabled.
   * You can provide either `latest` or `recommended` to use the latest/recommended version of fabric.
+* `--neoforge <string>` Specify the NeoForge loader version (for example `21.1.265`).
+  * For Minecraft `1.21.1`, use `21.1.265` and Java 21.
 
 > [!NOTE]  
-> Forge and fabric cannot be used together on the same server. This command will fail if both are provided.
+> Only one loader can be used on the same server. NeoForge mods belong in `servers/<id>-<minecraft-version>/neoforgemods/required`, `optionalon`, or `optionaloff`. Optional-on mods are enabled by default; optional-off mods are disabled by default. The launcher downloads these files from the Nebula repository and copies enabled jars into the game's `mods` folder before launch. Fabric mods from `fabricmods` do not work with NeoForge and are not included when the server metadata selects NeoForge.
+
+Nebula downloads the NeoForge installer and libraries from the official Maven repository when generating the distribution. You do not need to install NeoForge inside this repository. For manual local testing, install a 64-bit Java 21 JDK and use the official NeoForge 1.21.1 installer in a separate test game directory.
 
 >
 > Example Usage
 >
 > `generate server Test1 1.12.2 --forge 14.23.5.2847`
+>
+> `generate server Eclipse 1.21.1 --neoforge 21.1.265`
 >
 
 ---

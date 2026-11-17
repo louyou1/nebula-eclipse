@@ -16,6 +16,7 @@ export interface ServerMetaOptions {
     version?: string
     forgeVersion?: string
     fabricVersion?: string
+    neoForgeVersion?: string
 }
 
 export function getDefaultServerMeta(id: string, version: string, options?: ServerMetaOptions): ServerMeta {
@@ -48,6 +49,13 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
         servMeta.meta.description = `${servMeta.meta.description} (Fabric v${options.fabricVersion})`
         servMeta.fabric = {
             version: options.fabricVersion
+        }
+    }
+
+    if(options?.neoForgeVersion) {
+        servMeta.meta.description = `${servMeta.meta.description} (NeoForge v${options.neoForgeVersion})`
+        servMeta.neoforge = {
+            version: options.neoForgeVersion
         }
     }
 
@@ -92,6 +100,17 @@ export interface ServerMeta {
         /**
          * The fabric loader version. This does NOT include the minecraft version.
          * Ex. 0.14.18
+         */
+        version: string
+    }
+
+    /**
+     * Properties related to NeoForge.
+     */
+    neoforge?: {
+        /**
+         * The NeoForge loader version. This does NOT include the Minecraft version.
+         * Ex. 21.1.265
          */
         version: string
     }

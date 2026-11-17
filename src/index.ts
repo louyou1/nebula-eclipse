@@ -180,7 +180,13 @@ const generateServerCommand: CommandModule = {
                 describe: 'Fabric version.',
                 type: 'string'
             })
+            .option('neoforge', {
+                describe: 'NeoForge version.',
+                type: 'string'
+            })
             .conflicts('forge', 'fabric')
+            .conflicts('forge', 'neoforge')
+            .conflicts('fabric', 'neoforge')
     },
     handler: async (argv) => {
         argv.root = getRoot()
@@ -188,7 +194,8 @@ const generateServerCommand: CommandModule = {
         logger.debug(`Root set to ${argv.root}`)
         logger.debug(`Generating server ${argv.id} for Minecraft ${argv.version}.`,
             `\n\t└ Forge version: ${argv.forge}`,
-            `\n\t└ Fabric version: ${argv.fabric}`
+            `\n\t└ Fabric version: ${argv.fabric}`,
+            `\n\t└ NeoForge version: ${argv.neoforge}`
         )
 
         const minecraftVersion = new MinecraftVersion(argv.version as string)
@@ -206,7 +213,7 @@ const generateServerCommand: CommandModule = {
                 logger.error('┃                                                         ┃')
                 logger.error('┃    Forge 1.20.3+ removed support for --fml.modLists.    ┃')
                 logger.error('┃  Helios Launcher can no longer load mods through Forge. ┃')
-                logger.error('┃      Please use Fabric or await NeoForged Support.      ┃')
+                logger.error('┃     Configure this version with the --neoforge option.    ┃')
                 logger.error('┃                                                         ┃')
                 logger.error('┃                     !!  WARNING !!                      ┃')
                 logger.error('┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛')
@@ -228,7 +235,8 @@ const generateServerCommand: CommandModule = {
             minecraftVersion,
             {
                 forgeVersion: argv.forge as string,
-                fabricVersion: argv.fabric as string
+                fabricVersion: argv.fabric as string,
+                neoForgeVersion: argv.neoforge as string
             }
         )
     }

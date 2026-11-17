@@ -6,12 +6,14 @@ import { VersionSegmentedRegistry } from '../../util/VersionSegmentedRegistry.js
 import { getDefaultServerMeta } from '../../model/nebula/ServerMeta.js';
 import { BaseModelStructure } from './BaseModel.struct.js';
 import { FabricModStructure } from './module/FabricMod.struct.js';
+import { NeoForgeModStructure } from './module/NeoForgeMod.struct.js';
 import { MiscFileStructure } from './module/File.struct.js';
 import { LibraryStructure } from './module/Library.struct.js';
 import { MinecraftVersion } from '../../util/MinecraftVersion.js';
 import { addSchemaToObject, SchemaTypes } from '../../util/SchemaUtil.js';
 import { isValidUrl } from '../../util/StringUtils.js';
 import { FabricResolver } from '../../resolver/fabric/Fabric.resolver.js';
+import { NeoForgeResolver } from '../../resolver/neoforge/NeoForge.resolver.js';
 export class ServerStructure extends BaseModelStructure {
     discardOutput;
     invalidateCache;
@@ -59,6 +61,12 @@ export class ServerStructure extends BaseModelStructure {
             modContainer = fms.getContainerDirectory();
             serverMetaOpts.fabricVersion = options.fabricVersion;
         }
+        if (options.neoForgeVersion != null) {
+            serverMetaOpts.neoForgeVersion = options.neoForgeVersion;
+            const fms = new NeoForgeModStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, []);
+            await fms.init();
+            modContainer = fms.getContainerDirectory();
+        }
         const serverMeta = addSchemaToObject(getDefaultServerMeta(id, minecraftVersion.toString(), serverMetaOpts), SchemaTypes.ServerMetaSchema, this.absoluteRoot);
         await writeFile(resolvePath(absoluteServerRoot, this.SERVER_META_FILE), JSON.stringify(serverMeta, null, 2));
         const libS = new LibraryStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, []);
@@ -87,6 +95,10 @@ export class ServerStructure extends BaseModelStructure {
                 }
                 // Read server meta
                 const serverMeta = JSON.parse(await readFile(resolvePath(absoluteServerRoot, this.SERVER_META_FILE), 'utf-8'));
+                const configuredLoaders = [serverMeta.forge, serverMeta.fabric, serverMeta.neoforge].filter(Boolean);
+                if (configuredLoaders.length > 1) {
+                    throw new Error(`Server ${file} configures more than one mod loader.`);
+                }
                 const minecraftVersion = new MinecraftVersion(match[2]);
                 const untrackedFiles = serverMeta.untrackedFiles || [];
                 let iconUrl = null;
@@ -129,6 +141,15 @@ export class ServerStructure extends BaseModelStructure {
                     const fabricModStruct = new FabricModStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, untrackedFiles);
                     const fabricModModules = await fabricModStruct.getSpecModel();
                     modules.push(...fabricModModules);
+                }
+                if (serverMeta.neoforge) {
+                    const neoForgeResolver = new NeoForgeResolver(dirname(this.containerDirectory), '', this.baseUrl, minecraftVersion, serverMeta.neoforge.version, this.invalidateCache);
+                    if (!neoForgeResolver.isForVersion(minecraftVersion, serverMeta.neoforge.version)) {
+                        throw new Error(`NeoForge resolver does not support Minecraft ${minecraftVersion} / NeoForge ${serverMeta.neoforge.version}!`);
+                    }
+                    modules.push(await neoForgeResolver.getModule());
+                    const neoForgeModStruct = new NeoForgeModStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, untrackedFiles);
+                    modules.push(...await neoForgeModStruct.getSpecModel());
                 }
                 const libraryStruct = new LibraryStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, untrackedFiles);
                 const libraryModules = await libraryStruct.getSpecModel();

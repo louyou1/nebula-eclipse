@@ -7,12 +7,14 @@ import { VersionSegmentedRegistry } from '../../util/VersionSegmentedRegistry.js
 import { ServerMeta, getDefaultServerMeta, ServerMetaOptions, UntrackedFilesOption } from '../../model/nebula/ServerMeta.js'
 import { BaseModelStructure } from './BaseModel.struct.js'
 import { FabricModStructure } from './module/FabricMod.struct.js'
+import { NeoForgeModStructure } from './module/NeoForgeMod.struct.js'
 import { MiscFileStructure } from './module/File.struct.js'
 import { LibraryStructure } from './module/Library.struct.js'
 import { MinecraftVersion } from '../../util/MinecraftVersion.js'
 import { addSchemaToObject, SchemaTypes } from '../../util/SchemaUtil.js'
 import { isValidUrl } from '../../util/StringUtils.js'
 import { FabricResolver } from '../../resolver/fabric/Fabric.resolver.js'
+import { NeoForgeResolver } from '../../resolver/neoforge/NeoForge.resolver.js'
 
 export interface CreateServerResult {
     modContainer?: string
@@ -56,6 +58,7 @@ export class ServerStructure extends BaseModelStructure<Server> {
             version?: string
             forgeVersion?: string
             fabricVersion?: string
+            neoForgeVersion?: string
         }
     ): Promise<CreateServerResult | null> {
         const effectiveId = ServerStructure.getEffectiveId(id, minecraftVersion)
@@ -101,6 +104,19 @@ export class ServerStructure extends BaseModelStructure<Server> {
             serverMetaOpts.fabricVersion = options.fabricVersion
         }
 
+        if (options.neoForgeVersion != null) {
+            serverMetaOpts.neoForgeVersion = options.neoForgeVersion
+            const fms = new NeoForgeModStructure(
+                absoluteServerRoot,
+                relativeServerRoot,
+                this.baseUrl,
+                minecraftVersion,
+                []
+            )
+            await fms.init()
+            modContainer = fms.getContainerDirectory()
+        }
+
         const serverMeta: ServerMeta = addSchemaToObject(
             getDefaultServerMeta(id, minecraftVersion.toString(), serverMetaOpts),
             SchemaTypes.ServerMetaSchema,
@@ -142,6 +158,10 @@ export class ServerStructure extends BaseModelStructure<Server> {
 
                 // Read server meta
                 const serverMeta = JSON.parse(await readFile(resolvePath(absoluteServerRoot, this.SERVER_META_FILE), 'utf-8')) as ServerMeta
+                const configuredLoaders = [serverMeta.forge, serverMeta.fabric, serverMeta.neoforge].filter(Boolean)
+                if (configuredLoaders.length > 1) {
+                    throw new Error(`Server ${file} configures more than one mod loader.`)
+                }
                 const minecraftVersion = new MinecraftVersion(match[2])
                 const untrackedFiles: UntrackedFilesOption[] = serverMeta.untrackedFiles || []
 
@@ -219,6 +239,31 @@ export class ServerStructure extends BaseModelStructure<Server> {
 
                     const fabricModModules = await fabricModStruct.getSpecModel()
                     modules.push(...fabricModModules)
+                }
+
+                if(serverMeta.neoforge) {
+                    const neoForgeResolver = new NeoForgeResolver(
+                        dirname(this.containerDirectory),
+                        '',
+                        this.baseUrl,
+                        minecraftVersion,
+                        serverMeta.neoforge.version,
+                        this.invalidateCache
+                    )
+                    if (!neoForgeResolver.isForVersion(minecraftVersion, serverMeta.neoforge.version)) {
+                        throw new Error(`NeoForge resolver does not support Minecraft ${minecraftVersion} / NeoForge ${serverMeta.neoforge.version}!`)
+                    }
+
+                    modules.push(await neoForgeResolver.getModule())
+
+                    const neoForgeModStruct = new NeoForgeModStructure(
+                        absoluteServerRoot,
+                        relativeServerRoot,
+                        this.baseUrl,
+                        minecraftVersion,
+                        untrackedFiles
+                    )
+                    modules.push(...await neoForgeModStruct.getSpecModel())
                 }
 
                 const libraryStruct = new LibraryStructure(absoluteServerRoot, relativeServerRoot, this.baseUrl, minecraftVersion, untrackedFiles)
