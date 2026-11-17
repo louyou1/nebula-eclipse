@@ -1039,6 +1039,26 @@
           }
         },
         {
+          "id": "net.paradis:paradis-mod:1.0@jar",
+          "name": "Paradis-Mod",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1009250,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/fabricmods/required/paradis-mod-1.0.jar",
+            "MD5": "e20106460932d9f14719bd6d06c48cac"
+          }
+        },
+        {
+          "id": "net.imnowa:paradisrpadditional:1.1.5@jar",
+          "name": "ParadisRP Additional",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 270271,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/fabricmods/required/paradisrpadditional-1.1.5.jar",
+            "MD5": "68660889355bb2609f8332a32d937af8"
+          }
+        },
+        {
           "id": "me.fzzyhmstrs:particle_core:0.3.3+1.21@jar",
           "name": "Particle Core",
           "type": "FabricMod",
