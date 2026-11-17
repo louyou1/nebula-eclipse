@@ -1,0 +1,16 @@
+{
+  "$schema": "file:///G:/Github/Nebula/schemas/ServerMetaSchema.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "name": "Eclipse",
+    "description": "Serveur Minecraft Eclipse",
+    "icon": "",
+    "address": "play.eclipse.example:25565",
+    "mainServer": true,
+    "autoconnect": false
+  },
+  "fabric": {
+    "version": "0.19.3"
+  },
+  "untrackedFiles": []
+}

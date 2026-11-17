@@ -1,0 +1,1693 @@
+{
+  "version": "1.0.0",
+  "rss": "",
+  "servers": [
+    {
+      "id": "eclipse-1.21.1",
+      "name": "Eclipse",
+      "description": "Serveur Minecraft Eclipse",
+      "icon": null,
+      "version": "1.0.0",
+      "address": "play.eclipse.example:25565",
+      "minecraftVersion": "1.21.1",
+      "mainServer": true,
+      "autoconnect": false,
+      "modules": [
+        {
+          "id": "net.fabricmc:fabric-loader:0.19.3",
+          "name": "Fabric (fabric-loader)",
+          "type": "Fabric",
+          "artifact": {
+            "size": 1976502,
+            "MD5": "881e0e9f53a11b9ad468b47afd678bfd",
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/lib/net/fabricmc/fabric-loader/0.19.3/fabric-loader-0.19.3.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.21.1-fabric-0.19.3",
+              "name": "Fabric (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 2862,
+                "MD5": "8161db7a1d568d3b6cda07bbdc4c8c27",
+                "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/versions/1.21.1-fabric-0.19.3/1.21.1-fabric-0.19.3.json"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm:9.10.1",
+              "name": "Fabric (asm)",
+              "type": "Library",
+              "artifact": {
+                "size": 126151,
+                "MD5": "9cb72080438acf27f2607002e1444a7b",
+                "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/lib/org/ow2/asm/asm/9.10.1/asm-9.10.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-analysis:9.10.1",
+              "name": "Fabric (asm-analysis)",
+              "type": "Library",
+              "artifact": {
+                "size": 35140,
+                "MD5": "6dd9011ec87f65e4b2e14e938c4118e4",
+                "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/lib/org/ow2/asm/asm-analysis/9.10.1/asm-analysis-9.10.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-commons:9.10.1",
+              "name": "Fabric (asm-commons)",
+              "type": "Library",
+              "artifact": {
+                "size": 74840,
+                "MD5": "8eee0b1bdd046baf472eb83dd5e6bb44",
+                "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/lib/org/ow2/asm/asm-commons/9.10.1/asm-commons-9.10.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-tree:9.10.1",
+              "name": "Fabric (asm-tree)",
+              "type": "Library",
+              "artifact": {
+                "size": 51958,
+                "MD5": "62541e1dc62331408ef31317555bf4fa",
+                "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/lib/org/ow2/asm/asm-tree/9.10.1/asm-tree-9.10.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-util:9.10.1",
+              "name": "Fabric (asm-util)",
+              "type": "Library",
+              "artifact": {
+                "size": 95628,
+                "MD5": "d0892ecb209867805e7d2418e5dc6c42",
+                "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/lib/org/ow2/asm/asm-util/9.10.1/asm-util-9.10.1.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:sponge-mixin:0.17.3+mixin.0.8.7",
+              "name": "Fabric (sponge-mixin)",
+              "type": "Library",
+              "artifact": {
+                "size": 1540060,
+                "MD5": "87002a5fc9faa1543bf4204f8d5876fb",
+                "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/lib/net/fabricmc/sponge-mixin/0.17.3+mixin.0.8.7/sponge-mixin-0.17.3+mixin.0.8.7.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:intermediary:1.21.1",
+              "name": "Fabric (intermediary)",
+              "type": "Library",
+              "artifact": {
+                "size": 657725,
+                "MD5": "850be48a3406b9efdf8e64b1c2db97f8",
+                "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/repo/lib/net/fabricmc/intermediary/1.21.1/intermediary-1.21.1.jar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "mod.chloeprime.aaaparticles:aaa_particles:2.2.3@jar",
+          "name": "AAA Particles",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 5685280,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/aaa_particles-fabric-1.21.1-2.2.3.jar",
+            "MD5": "ff947592f68baafbacf678e1078985f2"
+          }
+        },
+        {
+          "id": "com.kurosive:aaaparticlescommand:1.1.0@jar",
+          "name": "AAA Particles Command",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 37042,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/aaaparticlescommand-1.1.0.jar",
+            "MD5": "b2582a3403fcc9e2323d1ea96a1d32ba"
+          }
+        },
+        {
+          "id": "io.wispforest:accessories:1.1.0-beta.53+1.21.1@jar",
+          "name": "Accessories",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1106779,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/accessories-fabric-paradisfork-1.1.0-beta.53+1.21.1.jar",
+            "MD5": "1acb1992c5499bcc022882bc262c9fb8"
+          }
+        },
+        {
+          "id": "com.github.alexthe666:alexsmobs:1.21.1-1.3.0@jar",
+          "name": "Alex's Mobs",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 26504374,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/alexsmobsfabric-1.21.1-1.3.0.jar",
+            "MD5": "17a189fdba2f4f41444d82773f219089"
+          }
+        },
+        {
+          "id": "team.creative:ambientsounds:6.3.10@jar",
+          "name": "AmbientSounds",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 84823727,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/AmbientSounds_FABRIC_v6.3.10_mc1.21.1.jar",
+            "MD5": "dea282ea78054e8af856774b720b8dd2"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "dev.architectury.utils:architectury:13.0.11@jar",
+          "name": "Architectury",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 600921,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/architectury-13.0.11-fabric.jar",
+            "MD5": "5d7a93f9b84d8facf6a7d7a51d71158b"
+          }
+        },
+        {
+          "id": "mod.lwhrvw:astrocraft:1.5.1+1.21@jar",
+          "name": "Astrocraft",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 6468205,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/astrocraft-1.5.1+1.21.jar",
+            "MD5": "890493281ee06a4881d9e7be265a8254"
+          }
+        },
+        {
+          "id": "earth.terrarium.athena.impl:athena:4.0.6@jar",
+          "name": "Athena",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 88425,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/athena-fabric-1.21.1-4.0.6.jar",
+            "MD5": "a549af3b3a32722ab81ff11d9f44f90b"
+          }
+        },
+        {
+          "id": "com.moulberry:axiom:6.0.5@jar",
+          "name": "Axiom",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 47202626,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Axiom-6.0.5-for-MC1.21.1.jar",
+            "MD5": "9fcc8564431427c355f61278d479df0f"
+          }
+        },
+        {
+          "id": "betterblockentities:betterblockentities:1.3.4-beta.3+mc1.21.1@jar",
+          "name": "BBE",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 178974,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/bbe-fabric-1.3.4-beta.3+mc1.21.1.jar",
+            "MD5": "49753ed99f1699eeebca3f6fe9ae31b0"
+          }
+        },
+        {
+          "id": "generated.fabricmod:beltborne_lanterns:1.2.5-fabric+1.21.1@jar",
+          "name": "Beltborne_lanterns",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 136912,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/beltborne_lanterns-1.2.5-fabric+1.21.1.jar",
+            "MD5": "b233530bcb407db30837ff729e4b4a4b"
+          }
+        },
+        {
+          "id": "net.oxcodsnet:bl_accessories_layer:1.2.2@jar",
+          "name": "Beltborne Lanterns: Accessories Layer",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 56167,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/bl_accessories_layer-1.2.2-fabric+1.21.1.jar",
+            "MD5": "559061621378d1707a5856164a7af89d"
+          }
+        },
+        {
+          "id": "generated.fabricmod:cardinal-components:6.1.3@jar",
+          "name": "Cardinal Components API",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 229645,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/cardinal-components-api-6.1.3.jar",
+            "MD5": "8febe13b1c2df1e90a6fa8b5de8521a4"
+          }
+        },
+        {
+          "id": "earth.terrarium:chipped:4.0.2@jar",
+          "name": "Chipped",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 15016830,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/chipped-fabric-1.21.1-4.0.2.jar",
+            "MD5": "c98271e7ba961e78e4a589fc53fa71a2"
+          }
+        },
+        {
+          "id": "com.chunklite:chunklite:1.03@jar",
+          "name": "ChuckLite",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 197060,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionalon/chunk-lite-1.03-fabric-1.21.1.jar",
+            "MD5": "8c184a28c708abf210747633cee50f56"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "com.github.alexthe666:citadel:1.21.1-1.1.0@jar",
+          "name": "Citadel",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 770140,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/citadel-1.21.1-1.1.0.jar",
+            "MD5": "6f91b87788f69ddc3e58442194f85a13"
+          }
+        },
+        {
+          "id": "me.shedaniel.autoconfig.example:cloth-config:15.0.140@jar",
+          "name": "Cloth Config v15",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1157166,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/cloth-config-15.0.140-fabric.jar",
+            "MD5": "a2c091b027ad6ba8e54b07020fd45884"
+          }
+        },
+        {
+          "id": "com.connectivity:connectivity:1.21-7.6@jar",
+          "name": "Connectivity Mod",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 198109,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/connectivity-fabric-1.21-7.6.jar",
+            "MD5": "cdbe7094219a5f013d9e7c241ab64497"
+          }
+        },
+        {
+          "id": "generated.fabricmod:controlling:19.0.5@jar",
+          "name": "Controlling",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 83679,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Controlling-fabric-1.21.1-19.0.5.jar",
+            "MD5": "5660c1ed5fee202ca5ca9a617a4202b4"
+          }
+        },
+        {
+          "id": "tocraft.craftedcore:craftedcore:5.8.2@jar",
+          "name": "CraftedCore",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 785306,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/craftedcore-5.8.2.jar",
+            "MD5": "f07d2e7b34def65f835756fccf89f41d"
+          }
+        },
+        {
+          "id": "ru.fewizz:crawl:0.14.9@jar",
+          "name": "Crawl",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 36975,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/crawl-0.14.9.jar",
+            "MD5": "9c74508ecda3453eefe6cf6b2d765dc0"
+          }
+        },
+        {
+          "id": "team.creative:creativecore:2.13.48@jar",
+          "name": "CreativeCore",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1257391,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/CreativeCore_FABRIC_v2.13.48_mc1.21.1.jar",
+            "MD5": "e4bb94ad9a8f85d2494b8ed1765a45f8"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "com.cupboard:cupboard:1.21.1-4.0@jar",
+          "name": "Cupboard",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 26760,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/cupboard-fabric-1.21.1-4.0.jar",
+            "MD5": "4c6f04abf9486a318a958e65d5562423"
+          }
+        },
+        {
+          "id": "noppes.npcs:customnpcs:1.0.0@jar",
+          "name": "Custom NPCs",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 13042156,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/CustomNPCs-Unofficial-Fabric-1.21.1.20260124.jar",
+            "MD5": "d1f14a07b86a5f384cae8874e4fbdc4d"
+          }
+        },
+        {
+          "id": "generated.fabricmod:cubes-without-borders:3.0.0+mc1.21@jar",
+          "name": "Cubes Without Borders",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 81288,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/cwb-fabric-3.0.0+mc1.21.jar",
+            "MD5": "2817802772c08e9ea780a42f9a205bdf"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "daot:dannys-aot:2.4.1@jar",
+          "name": "Danny's AoT",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 47754049,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/dannys-aot-2.5.2.jar",
+            "MD5": "1f046821965d9f4942bdb25710426097"
+          }
+        },
+        {
+          "id": "dannys.aotconfigs:dannys-aot-configs:3.0.0@jar",
+          "name": "Danny's AOT - Configs",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1297472,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/dannys-aot-configs-3.0.0.jar",
+            "MD5": "d7b9e31e0f2a609c9e5ac69d5e776a5f"
+          }
+        },
+        {
+          "id": "com.aotbarrel:aotbarrel:1.1.0-dev@jar",
+          "name": "DAOT-Barrels",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1199735,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/DAOT-Barrels-1.1.0.jar",
+            "MD5": "3ffbf8e1e7b3815a495bacc7f2de1759"
+          }
+        },
+        {
+          "id": "com.LostMythic:daotsable:1.0.1@jar",
+          "name": "DAOT Sable Compat",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 24315,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/DaotSableFabric-1.0.1.jar",
+            "MD5": "cc036e928c573cec8ee92c04f9f2c763"
+          }
+        },
+        {
+          "id": "grondag.darkness:darkness:1.2.0@jar",
+          "name": "True Darkness Refabricated",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 158260,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/darkness-fabric-1.2.0+mc1.21.1.jar",
+            "MD5": "0b3385765e98428707c24c88e52958a5"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "org.dawnoftime.dawnoftime:dawnoftimebuilder:1.6.6@jar",
+          "name": "Dawn Of Time",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 3139846,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Dawn%20Of%20Time-fabric-1.21.1-1.6.6.jar",
+            "MD5": "fc90e04a8a446b79553872cfe7e2eb3b"
+          }
+        },
+        {
+          "id": "generated.fabricmod:debugify:1.21.1+1.0@jar",
+          "name": "Debugify",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 292202,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Debugify-1.21.1+1.0.jar",
+            "MD5": "604cf2f99be0b208a3354783f5b56fa2"
+          }
+        },
+        {
+          "id": "net.mhaks:dustydecorations:1.1-1.21+1.21.1@jar",
+          "name": "Dusty Decorations Refabricated",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 538912,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/DustyDecoRefabricated-1.1-1.21+1.21.1.jar",
+            "MD5": "4a4fea36abc8ab731671cc19fd055fde"
+          }
+        },
+        {
+          "id": "net.lostluma.dynamic_fps.impl.textile.compat:dynamic_fps:3.11.4@jar",
+          "name": "Dynamic FPS",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 217532,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/dynamic-fps-3.11.4+minecraft-1.21.0-fabric.jar",
+            "MD5": "aa6037fac4244ba15a7ea67adc335eff"
+          }
+        },
+        {
+          "id": "io.github.kosmx.emotes:emotecraft:2.4.12@jar",
+          "name": "Emotecraft",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 863362,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/emotecraft-for-MC1.21.1-2.4.12-fabric.jar",
+            "MD5": "068aace7ea97d0a511ce4e13599c7c79"
+          }
+        },
+        {
+          "id": "generated.fabricmod:enchanted:vertical-slabs-2.3.2-fabric-mc1.21@jar",
+          "name": "Enchanted",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 254412,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/enchanted-vertical-slabs-2.3.2-fabric-mc1.21.jar",
+            "MD5": "f4ec170677404d4c0ac7c51fe20d0689"
+          }
+        },
+        {
+          "id": "dev.tr7zw:entityculling:1.10.5@jar",
+          "name": "EntityCulling",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1595131,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/entityculling-fabric-1.10.5-mc1.21.1.jar",
+            "MD5": "833cb8fd661a52acf63856d22e45f832"
+          }
+        },
+        {
+          "id": "io.github.mortuusars:exposure_polaroid:1.1.6@jar",
+          "name": "Exposure Polaroid",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 181018,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/exposure_polaroid-fabric-1.21.1-1.1.6.jar",
+            "MD5": "4b65d8c94bc5f553ba547b8eaec2211a"
+          }
+        },
+        {
+          "id": "io.github.mortuusars:exposure:1.9.18@jar",
+          "name": "Exposure",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1980872,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/exposure-fabric-1.21.1-1.9.18.jar",
+            "MD5": "8ee39d3c8b6b7fc77f20e76378976560"
+          }
+        },
+        {
+          "id": "generated.fabricmod:fabric-api:0.116.17+1.21.1@jar",
+          "name": "Fabric API",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2452735,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/fabric-api-0.116.17+1.21.1.jar",
+            "MD5": "e027a4f5fcf21ee26fa48de7e7033c2b"
+          }
+        },
+        {
+          "id": "generated.fabricmod:fabric-language-kotlin:1.13.13+kotlin.2.4.10@jar",
+          "name": "Fabric Language Kotlin",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 8076363,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar",
+            "MD5": "b70470268be8c74a10e10b24a2bf7df6"
+          }
+        },
+        {
+          "id": "io.github.lucaargolo:seasons:2.4.2-BETA+1.21@jar",
+          "name": "Fabric Seasons",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 433476,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/fabric-seasons-2.4.2-BETA+1.21.jar",
+            "MD5": "83f1c655c6ded3bcce6a266a3c565afd"
+          }
+        },
+        {
+          "id": "io.github.lucaargolo:seasonsdelightcompat:1.0-1.3.9@jar",
+          "name": "Fabric Seasons: Delight Compat",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 39100,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/fabric-seasons-delight-1.3.9-compat-1.0.jar",
+            "MD5": "2b48e0c9b4b78b275ed90b2de7d898ff"
+          }
+        },
+        {
+          "id": "io.github.lucaargolo:seasonsextras:1.3.3-BETA+1.21@jar",
+          "name": "Fabric Seasons: Extras",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 363558,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/fabric-seasons-extras-1.3.3-BETA+1.21.jar",
+            "MD5": "e42782b0ac1f5d59e7ce9c059b3c36ac"
+          }
+        },
+        {
+          "id": "vectorwing.farmersdelight:farmersdelight:1.21.1-3.2.8+refabricated@jar",
+          "name": "Farmer's Delight",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 3142838,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/FarmersDelight-1.21.1-3.2.8+refabricated.jar",
+            "MD5": "9674f725fa0714cad9efaaaa6c702fef"
+          }
+        },
+        {
+          "id": "generated.fabricmod:farsight:1.7@jar",
+          "name": "Farsight",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 10183,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionalon/farsight-1.7.jar",
+            "MD5": "8b538b241feaa474dc661b4523c18fb6"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "farsight:farsight:1.21-4.5@jar",
+          "name": "Farsight Mod",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 371550,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/farsight-fabric-1.21-4.5.jar",
+            "MD5": "b67f1458d8b58ca4451c47fb310bcb1a"
+          }
+        },
+        {
+          "id": "generated.fabricmod:farsight_sable_compat:1.0.0@jar",
+          "name": "Farsight x Sable Compat",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2804,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/farsight-sable-compat-1.0.0.jar",
+            "MD5": "b816c10520be11834dc2ee22c6cc88b0"
+          }
+        },
+        {
+          "id": "generated.fabricmod:ferritecore:7.0.3@jar",
+          "name": "FerriteCore",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 123450,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/ferritecore-7.0.3-fabric.jar",
+            "MD5": "b8513c8c3eef01ea1117ed8d8cba060d"
+          }
+        },
+        {
+          "id": "dev.tr7zw:firstperson:2.7.2@jar",
+          "name": "FirstPerson",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1621512,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/firstperson-fabric-2.7.2-mc1.21.1.jar",
+            "MD5": "8f063d0be9fbfc9db28012415ddac451"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "fuzs.forgeconfigapiport.fabric.impl:forgeconfigapiport:21.1.6@jar",
+          "name": "Forge Config API Port",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 633065,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
+            "MD5": "eba1a7f9d9976e983a2b9eb5e915e087"
+          }
+        },
+        {
+          "id": "com.github.thedeathlycow:frostiful:2.3.2+1.21.1@jar",
+          "name": "Frostiful",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2449278,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/frostiful-2.3.2+1.21.1.jar",
+            "MD5": "e342571f1506d399100845c190b0b506"
+          }
+        },
+        {
+          "id": "com.supermartijn642:fusion:1.3.15@jar",
+          "name": "Fusion",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 913289,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/fusion-1.3.15-fabric-mc1.21.jar",
+            "MD5": "079648c4df3faffc2d72d799c01e1c04"
+          }
+        },
+        {
+          "id": "me.fzzyhmstrs:fzzy_config:0.7.6+1.21@jar",
+          "name": "Fzzy Config",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2365335,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/fzzy_config-0.7.6+1.21.jar",
+            "MD5": "dcedb9014b228c01941b2ef4f2743f19"
+          }
+        },
+        {
+          "id": "software.bernie:geckolib:4.9.2@jar",
+          "name": "GeckoLib 4",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 660416,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/geckolib-fabric-1.21.1-4.9.2.jar",
+            "MD5": "fe791e7b10c8b7c736ea3e57747eac09"
+          }
+        },
+        {
+          "id": "com.gpumemleakfix:gpumemleakfix:1.21-1.8@jar",
+          "name": "Gpu memory leak fix mod",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 6016,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/gpumemleakfix-fabric-1.21-1.8.jar",
+            "MD5": "ccad6ba674f135d3cbb8f706d8a9a4e5"
+          }
+        },
+        {
+          "id": "dev.vercim:handycam:1.3.1@jar",
+          "name": "Handycam",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 114501,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/handycam-1.3.1-fabric-1.21.1.jar",
+            "MD5": "0c7f145e56aea6f698f3e8634463a4d3"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "generated.fabricmod:immediatelyfast:1.6.13+1.21.1@jar",
+          "name": "ImmediatelyFast",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 337729,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/ImmediatelyFast-Fabric-1.6.13+1.21.1.jar",
+            "MD5": "d2c3227f6c6c2ce677c54d9b68b6c946"
+          }
+        },
+        {
+          "id": "generated.fabricmod:iris:1.8.14-beta.1+mc1.21.1@jar",
+          "name": "Iris",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2791343,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionalon/iris-fabric-1.8.14-beta.1+mc1.21.1.jar",
+            "MD5": "4399f0c3edfe2af7f61db3725fe5c751"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "me.decce:ixeris:4.6.5+1.21.1-fabric@jar",
+          "name": "Ixeris",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 774979,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Ixeris-4.6.5+1.21.1-fabric.jar",
+            "MD5": "09fcd996b23c79cb19f9b21fe57da19f"
+          }
+        },
+        {
+          "id": "de.keksuccino:justzoom:2.1.0@jar",
+          "name": "Just Zoom",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 196476,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionalon/justzoom_fabric_2.1.0_MC_1.21.1.jar",
+            "MD5": "ef6a7cf9d987e0a5adecc749bdea76a3"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "snownee.kiwi:kiwi:15.8.8+fabric@jar",
+          "name": "Kiwi Library",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1557700,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Kiwi-1.21.1-Fabric-15.8.8.jar",
+            "MD5": "0f33306fd10735bcade4d35f438b0eb6"
+          }
+        },
+        {
+          "id": "de.keksuccino:konkrete:1.9.9@jar",
+          "name": "Konkrete",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 786695,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionalon/konkrete_fabric_1.9.9_MC_1.21.jar",
+            "MD5": "287ee9cfc6015f706672fd8c20f5ef9c"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "generated.fabricmod:lambdynlights:4.8.11+1.21.1@jar",
+          "name": "LambDynamicLights",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2023375,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/lambdynamiclights-4.8.11+1.21.1.jar",
+            "MD5": "fc7e8b48d98bc94025ea70c1ed441b2f"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "me.slovuka:last-world-panorama:1.21.1@jar",
+          "name": "Last World Panorama",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 23751,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/last-world-panorama-1.21.1.jar",
+            "MD5": "aff485a43e8ddb3b5ca803b8eec0d218"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "me.zipestudio.ltt.entrypoint:let_them_talk:1.0.1+1.21.1+fabric@jar",
+          "name": "Let Them Talk (LTT)",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 395299,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/let-them-talk-1.0.1+1.21.1+fabric.jar",
+            "MD5": "cdf50d5e4a1dfc56331271200cb7ab23"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "com.berksire:furniture:1.1.4@jar",
+          "name": "[Let's Do] Furniture",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 4158006,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/letsdo-furniture-fabric-1.1.4.jar",
+            "MD5": "9ffa57d51d56c0bd42ea97057525ed60"
+          }
+        },
+        {
+          "id": "fi.dy.masa:litematica:0.19.61@jar",
+          "name": "Litematica",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1642590,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/litematica-fabric-1.21-0.19.61.jar",
+            "MD5": "2c60292f47c3a2fac9d4b72b20247431"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "net.caffeinemc.mods:lithium:0.15.4+mc1.21.1@jar",
+          "name": "Lithium",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 797454,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/lithium-fabric-0.15.4+mc1.21.1.jar",
+            "MD5": "6fd6783640f42130f041b50cca2d3be6"
+          }
+        },
+        {
+          "id": "net.luckystudio:cozyhome:1.1.20@jar",
+          "name": "Cozy Home",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 3121070,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Luckys-Cozyhome-Refurnished-1.1.20.jar",
+            "MD5": "c432cd0ce7f8dc715acd559d44d524cf"
+          }
+        },
+        {
+          "id": "fi.dy.masa:malilib:0.21.10@jar",
+          "name": "MaLiLib",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1411200,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/malilib-fabric-1.21-0.21.10.jar",
+            "MD5": "6a5553e46eed0692d17b8cd566aed103"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "net.kikoz:mcwdoors:1.1.5@jar",
+          "name": "Macaw's Doors",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1219302,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/mcw-doors-1.1.5-mc1.21.1fabric.jar",
+            "MD5": "26ff3cfe3bc0b2ebc06824d2168a2ddd"
+          }
+        },
+        {
+          "id": "de.keksuccino:melody:1.0.10@jar",
+          "name": "Melody",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 188035,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/melody_fabric_1.0.10_MC_1.21.jar",
+            "MD5": "0f1bfbf2dd4fa047a1616fc448f3b856"
+          }
+        },
+        {
+          "id": "org.embeddedt:modernfix:5.25.1+mc1.21.1@jar",
+          "name": "ModernFix",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 471258,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/modernfix-fabric-5.25.1+mc1.21.1.jar",
+            "MD5": "17260c894041b7b4a1b1f2fd1a8f1a8b"
+          }
+        },
+        {
+          "id": "com.terraformersmc:modmenu:11.0.5@jar",
+          "name": "Mod Menu",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 975846,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/modmenu-11.0.5.jar",
+            "MD5": "52ed39a3015ef3e6b02915d87a8aabae"
+          }
+        },
+        {
+          "id": "io.github.jason13official:monolib:4.1.0@jar",
+          "name": "MonoLib",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 409857,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/monolib-fabric-1.21.1-4.1.0.jar",
+            "MD5": "41de6c9b398a716f7f64ac6440b47c8c"
+          }
+        },
+        {
+          "id": "net.mehvahdjukaar.moonlight.platform:moonlight:1.21.1-3.6.1@jar",
+          "name": "Moonlight Lib",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2251740,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/moonlight-1.21.1-3.6.1-fabric.jar",
+            "MD5": "8fa3a69e7f41e14ec6b0a875db7b6e41"
+          }
+        },
+        {
+          "id": "ca.fxco:moreculling:1.0.9@jar",
+          "name": "More Culling",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 332230,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/moreculling-fabric-1.21.1-1.0.9.jar",
+            "MD5": "673104ee5523803fdd4980d0c91b343a"
+          }
+        },
+        {
+          "id": "yalter.mousetweaks:mousetweaks:2.26@jar",
+          "name": "Mouse Tweaks",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 75984,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/MouseTweaks-fabric-mc1.21-2.26.jar",
+            "MD5": "1d39ead1641ef522bc7ae92383f21da8"
+          }
+        },
+        {
+          "id": "net.multiskin:multi-skin:1.2.1@jar",
+          "name": "Multi-Skin",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 212765,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/multi-skin-1.2.1.jar",
+            "MD5": "f78db04641d014153c27ca601e160703"
+          }
+        },
+        {
+          "id": "com.espii.mypictureframe:mpf:1.21.1-1.5.0@jar",
+          "name": "My Picture Frame",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1201356,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/mypictureframe-fabric-1.21.1-1.5.0.jar",
+            "MD5": "c342df67362410a0e69a60ee4e9bc649"
+          }
+        },
+        {
+          "id": "net.hibiscus.naturespirit:natures_spirit:2.2.5-1.21.1@jar",
+          "name": "Nature's Spirit",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 19149927,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/naturespirit-2.2.5-1.21.1.jar",
+            "MD5": "40301308ae3140698572c6a4bb20f8fa"
+          }
+        },
+        {
+          "id": "fabric.com.cursee:new_slab_variants:3.0.1@jar",
+          "name": "New Slab Variants",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1287430,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/new_slab_variants-merged-1.21.1-3.0.1.jar",
+            "MD5": "c0924b13de1feb34dd29db5be681cccb"
+          }
+        },
+        {
+          "id": "net.jmb19905:niftycarts:21.1.1@jar",
+          "name": "NiftyCarts",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 621307,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/niftycarts-21.1.1.jar",
+            "MD5": "2fd1237d2c627f059b6202efc27a235e"
+          }
+        },
+        {
+          "id": "dev.tr7zw:notenoughanimations:1.12.4@jar",
+          "name": "NotEnoughAnimations",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1948132,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/notenoughanimations-fabric-1.12.4-mc1.21.1.jar",
+            "MD5": "6afb17a78bec2140a3904dcd6d1a3d92"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "io.wispforest:owo:0.12.15.4+1.21@jar",
+          "name": "Oωo",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1183559,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/owo-lib-0.12.15.4+1.21.jar",
+            "MD5": "3627aee17111e12a8c66928f5d7a3fba"
+          }
+        },
+        {
+          "id": "generated.fabricmod:packetfixer:3.3.1@jar",
+          "name": "Packet Fixer",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 46623,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/packetfixer-3.3.1-1.20.5-1.21.X-merged.jar",
+            "MD5": "8f22fb065079340a72ae5ce0da12efcb"
+          }
+        },
+        {
+          "id": "me.fzzyhmstrs:particle_core:0.3.3+1.21@jar",
+          "name": "Particle Core",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 147812,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/particle_core-0.3.3+1.21.jar",
+            "MD5": "0900279584f271fc4647e575883850ae"
+          }
+        },
+        {
+          "id": "snownee.passablefoliage:passablefoliage:9.2.1+fabric@jar",
+          "name": "Passable Foliage",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 44983,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/PassableFoliage-1.21.1-Fabric-9.2.1.jar",
+            "MD5": "31b9cefbd342ab65f8a7859cec0c5cfa"
+          }
+        },
+        {
+          "id": "virtuoel.pehkui:pehkui:3.8.3+1.14.4-1.21@jar",
+          "name": "Pehkui",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 555041,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Pehkui-3.8.3+1.14.4-1.21.jar",
+            "MD5": "c28dbac324e13836c2c15e47bfcd9e45"
+          }
+        },
+        {
+          "id": "dev.kosmx.playerAnim:playeranimator:2.0.4+1.21.1@jar",
+          "name": "Player Animator",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 204541,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/player-animation-lib-fabric-2.0.4+1.21.1.jar",
+            "MD5": "93e684b0c741294dc2ac7e6b1f958dd2"
+          }
+        },
+        {
+          "id": "com.zigythebird.playeranim:player_animation_library:1.1.6+mc.1.21.1@jar",
+          "name": "Player Animation Library",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1154772,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/PlayerAnimationLibFabric-1.1.6+mc.1.21.1.jar",
+            "MD5": "4918da81cbb43a07ff657be5c0f6b82d"
+          }
+        },
+        {
+          "id": "com.supermartijn642:rechiseled:1.2.5@jar",
+          "name": "Rechiseled",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 11924403,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/rechiseled-1.2.5-fabric-mc1.21.jar",
+            "MD5": "6bd58a6054aff9e2a3ca18cd0bfdafb3"
+          }
+        },
+        {
+          "id": "generated.fabricmod:reeses-sodium-options:2.2.3+mc1.21.1@jar",
+          "name": "Reese's Sodium Options",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 259211,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/reeses-sodium-options-fabric-2.2.3+mc1.21.1.jar",
+            "MD5": "bb87d3438852737e636bf6b3f1f027d5"
+          }
+        },
+        {
+          "id": "tocraft.remorphed:remorphed:4.2@jar",
+          "name": "ReMorphed",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 92463,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/remorphed-4.2.jar",
+            "MD5": "33b49563491d84aca0424ea8dcc01b34"
+          }
+        },
+        {
+          "id": "com.teamresourceful:resourcefullib:3.0.12@jar",
+          "name": "Resourceful Lib",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 485586,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/resourcefullib-fabric-1.21-3.0.12.jar",
+            "MD5": "89dac4248b76747800fbc00fa063825e"
+          }
+        },
+        {
+          "id": "dev.ryanhcode:sable:2.0.6@jar",
+          "name": "Sable",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 17162518,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/sable-fabric-1.21.1-2.0.6.jar",
+            "MD5": "715ad75e30e5a7c6218ad732b07f7f9e"
+          }
+        },
+        {
+          "id": "me.chrr:scribble:1.5.1@jar",
+          "name": "Scribble",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 186408,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Scribble-1.5.1+mc1.21-fabric.jar",
+            "MD5": "72149f1c4ff45ddb41346480945e3794"
+          }
+        },
+        {
+          "id": "generated.fabricmod:seamlesschunks:fabric-0.1.0-beta.7@jar",
+          "name": "Seamlesschunks",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 62358,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/seamlesschunks-fabric-0.1.0-beta.7.jar",
+            "MD5": "688a72a309af344b37ad2acabf1d42eb"
+          }
+        },
+        {
+          "id": "generated.fabricmod:searchables:1.0.2@jar",
+          "name": "Searchables",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 79531,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/Searchables-fabric-1.21.1-1.0.2.jar",
+            "MD5": "33d8f858261d757ef89144ac13013987"
+          }
+        },
+        {
+          "id": "io.github.macuguita:seasonsnaturesspiritcompat:1.0.4@jar",
+          "name": "Seasons Nature's Spirit Compat",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 122603,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/seasonsnaturesspiritcompat-1.0.4.jar",
+            "MD5": "2490541d5c233d46e67d1506519771a1"
+          }
+        },
+        {
+          "id": "ru.magistu:siegemachines:1.39@jar",
+          "name": "SiegeMachines",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1968155,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/siege-machines-1.21.1-fabric-1.39.jar",
+            "MD5": "f8ced692d75b0aeaf91ce8ad5c402658"
+          }
+        },
+        {
+          "id": "me.flashyreese.mods.sodiumextra:sodium-extra:0.9.3+mc1.21.1@jar",
+          "name": "Sodium Extra",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 469925,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/sodium-extra-fabric-0.9.3+mc1.21.1.jar",
+            "MD5": "03581d8465df162f6e8f429c03aedf2d"
+          }
+        },
+        {
+          "id": "net.caffeinemc.mods:sodium:0.8.13+mc1.21.1@jar",
+          "name": "Sodium",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1574609,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/sodium-fabric-0.8.13+mc1.21.1.jar",
+            "MD5": "5d9c08eefe9ea23cd5201e93332e3450"
+          }
+        },
+        {
+          "id": "rynnavinx.sspb:sspb:4.1.0@jar",
+          "name": "Sodium Shadowy Path Blocks",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 78261,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/sodium-shadowy-path-blocks-fabric-4.1.0.jar",
+            "MD5": "59cd092e1cb7dba0a07dea198a4f7781"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "net.p3pp3rf1y:sophisticatedbackpacks:1.21.1-3.23.4.3.106@jar",
+          "name": "Sophisticated Backpacks",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 988478,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/sophisticatedbackpacks-1.21.1-3.23.4.3.106.jar",
+            "MD5": "642d3aaa4161a9df7b709a6b7f378f17"
+          }
+        },
+        {
+          "id": "net.p3pp3rf1y:sophisticatedcore:1.21.1-1.2.9.21.168@jar",
+          "name": "Sophisticated Core",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2996065,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/sophisticatedcore-1.21.1-1.2.9.21.168.jar",
+            "MD5": "44bf607ca1a8bfb7410514db85ac9c28"
+          }
+        },
+        {
+          "id": "com.sonicether.soundphysics:sound_physics_remastered:1.21.1-1.5.1@jar",
+          "name": "Sound Physics Remastered",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 205671,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/sound-physics-remastered-fabric-1.21.1-1.5.1.jar",
+            "MD5": "ca55ac70824e229cd1175238b50608a6"
+          }
+        },
+        {
+          "id": "me.lucko:spark:1.10.109@jar",
+          "name": "Spark",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 3609981,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/spark-1.10.109-fabric.jar",
+            "MD5": "7c8aa4055fff1aa75a43d26a0afd9e5c"
+          }
+        },
+        {
+          "id": "generated.fabricmod:spatial:gui-1.7.2+1.21.1-fabric@jar",
+          "name": "Spatial",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 253301,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/spatial-gui-1.7.2+1.21.1-fabric.jar",
+            "MD5": "02de6cec9dbc4b420438e007f9b1a10e"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "com.supermartijn642.configlib:supermartijn642configlib:1.1.8@jar",
+          "name": "SuperMartijn642's Config Lib",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 206993,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/supermartijn642configlib-1.1.8-fabric-mc1.21.jar",
+            "MD5": "fff83455887d85c6f7ebac7bba24fa8f"
+          }
+        },
+        {
+          "id": "com.supermartijn642.core:supermartijn642corelib:1.1.24@jar",
+          "name": "SuperMartijn642's Core Lib",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 620662,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/supermartijn642corelib-1.1.24-fabric-mc1.21.jar",
+            "MD5": "e7f486c8eaef28ab1104993ef74e3dd9"
+          }
+        },
+        {
+          "id": "net.mehvahdjukaar.supplementaries.platform:supplementaries:1.21.1-3.7.7@jar",
+          "name": "Supplementaries",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 13227079,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/supplementaries-fabric-1.21.1-3.7.7.jar",
+            "MD5": "a5b81f1d51bd91f6ad7436c80065ed1c"
+          }
+        },
+        {
+          "id": "net.mehvahdjukaar:suppsquared:1.21-1.2.18@jar",
+          "name": "Supplementaries Squared",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 771938,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/suppsquared-fabric-1.21-1.2.18.jar",
+            "MD5": "4a5d6ff6c44a6cfeadcdfbf5aaffd0dc"
+          }
+        },
+        {
+          "id": "me.zipestudio.talkingheads.entrypoint:talkingheads:1.1.4+1.21.1+fabric@jar",
+          "name": "Talking Heads",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 283269,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionalon/talking-heads-1.1.4+1.21.1+fabric.jar",
+            "MD5": "b1b832bb53bd3ef0524aef63439da419"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "terrablender.core:terrablender:4.1.0.8@jar",
+          "name": "TerraBlender",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 337989,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/TerraBlender-fabric-1.21.1-4.1.0.8.jar",
+            "MD5": "cf9f9ea80cd7f8febebbe1752f23b68f"
+          }
+        },
+        {
+          "id": "com.github.thedeathlycow.thermoo.impl:thermoo:4.8.0@jar",
+          "name": "Thermoo",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 275602,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/thermoo-4.8.0.jar",
+            "MD5": "ffec2d7ee60bb8512dcaa91c99018420"
+          }
+        },
+        {
+          "id": "generated.fabricmod:thermoo-patches:3.7.2@jar",
+          "name": "Thermoo Patches",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 273766,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/thermoo-patches-3.7.2.jar",
+            "MD5": "b7b56d2567794d4904e67e3f892eaa17"
+          }
+        },
+        {
+          "id": "com.li64.tide.loaders:tide:2.1.1@jar",
+          "name": "Tide",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2236420,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/tide-fabric-1.21.1-2.1.1.jar",
+            "MD5": "a163dfe91774f81dfd508234ade13001"
+          }
+        },
+        {
+          "id": "com.theendercore:trowel:1.4.0@jar",
+          "name": "Trowel",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 14748,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/trowel-1.4.0.jar",
+            "MD5": "29fc869d645137adf18f87b0f7428ac1"
+          }
+        },
+        {
+          "id": "com.beethoven92:twoplayersonehorse:1.0.2@jar",
+          "name": "TwoPlayersOneHorse",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 22938,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/twoplayersonehorse-fabric-1.21.1-1.0.2.jar",
+            "MD5": "05a0a19ae8a1d4c32a3c4ae369baf3d6"
+          }
+        },
+        {
+          "id": "de.maxhenkel:voicechat:1.21.1-2.6.22@jar",
+          "name": "Simple Voice Chat",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 5369475,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/voicechat-fabric-1.21.1-2.6.22.jar",
+            "MD5": "dccfc2a487792d2d52ca91d19b9d7f6d"
+          }
+        },
+        {
+          "id": "tocraft.walkers:walkers:5.8.12@jar",
+          "name": "Walkers",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1135813,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/walkers-5.8.12.jar",
+            "MD5": "ee761ea07c0c13b51a309632b409db1d"
+          }
+        },
+        {
+          "id": "generated.fabricmod:weaponmaster_ydm:fabric-1.21.1-4.4.2@jar",
+          "name": "Weaponmaster_ydm",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 302099,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionalon/weaponmaster_ydm-fabric-1.21.1-4.4.2.jar",
+            "MD5": "19de49be9c3797e811669e55faa362f1"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "com.duffopuffo:weatherglass:0.5.0+1.21.1-fabric@jar",
+          "name": "Weather Glass",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 331584,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/optionaloff/weatherglass-0.5.0-1.21.1-fabric.jar",
+            "MD5": "96a6ed852e62af967aad23b1a2c77805"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "com.sk89q:worldedit:7.3.8+6939-7d32b45@jar",
+          "name": "WorldEdit",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 6222854,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/worldedit-mod-7.3.8.jar",
+            "MD5": "f5d6f09ca5c4b1958780d01a099b779d"
+          }
+        },
+        {
+          "id": "dev.isxander.yacl3.platform:yet_another_config_lib_v3:3.8.2+1.21.1-fabric@jar",
+          "name": "YetAnotherConfigLib",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1131265,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/fabricmods/required/yet_another_config_lib_v3-3.8.2+1.21.1-fabric.jar",
+            "MD5": "aadf11f5a793296be7c195e1ca388492"
+          }
+        },
+        {
+          "id": "accessories.json5",
+          "name": "accessories.json5",
+          "type": "File",
+          "artifact": {
+            "size": 924,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/config/accessories.json5",
+            "MD5": "112e66801fc25fc7d285796c88e93c58",
+            "path": "config/accessories.json5"
+          }
+        },
+        {
+          "id": "CustomNpcs.cfg",
+          "name": "CustomNpcs.cfg",
+          "type": "File",
+          "artifact": {
+            "size": 1924,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/config/CustomNpcs.cfg",
+            "MD5": "acb83cb1ffba59c55cf2f75ec3c64bd7",
+            "path": "config/CustomNpcs.cfg"
+          }
+        },
+        {
+          "id": "entityculling.json",
+          "name": "entityculling.json",
+          "type": "File",
+          "artifact": {
+            "size": 2445,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/config/entityculling.json",
+            "MD5": "06e1d4a28556af7ece34ab14b87f173f",
+            "path": "config/entityculling.json"
+          }
+        },
+        {
+          "id": "spatial-gui.json",
+          "name": "spatial-gui.json",
+          "type": "File",
+          "artifact": {
+            "size": 4305,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/config/spatial-gui.json",
+            "MD5": "68a1122b2c75a81487652b17dc9259a0",
+            "path": "config/spatial-gui.json"
+          }
+        },
+        {
+          "id": "SodiumTranslations.zip",
+          "name": "SodiumTranslations.zip",
+          "type": "File",
+          "artifact": {
+            "size": 285073,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/resourcepacks/SodiumTranslations.zip",
+            "MD5": "468f56ca5bb248b92be2df337de5f098",
+            "path": "resourcepacks/SodiumTranslations.zip"
+          }
+        },
+        {
+          "id": "SPEMOTES_TRANSLATIONS_v1.1.zip",
+          "name": "SPEMOTES_TRANSLATIONS_v1.1.zip",
+          "type": "File",
+          "artifact": {
+            "size": 281890,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/resourcepacks/SPEMOTES_TRANSLATIONS_v1.1.zip",
+            "MD5": "d42bc3f95a3008d89325954dca355221",
+            "path": "resourcepacks/SPEMOTES_TRANSLATIONS_v1.1.zip"
+          }
+        },
+        {
+          "id": "servers.dat",
+          "name": "servers.dat",
+          "type": "File",
+          "artifact": {
+            "size": 8185,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/servers.dat",
+            "MD5": "093f8305badd4cf4b5cc7cc938fbaa1b",
+            "path": "servers.dat"
+          }
+        },
+        {
+          "id": "Aurora's Shaders.zip",
+          "name": "Aurora's Shaders.zip",
+          "type": "File",
+          "artifact": {
+            "size": 403810,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/Aurora's%20Shaders.zip",
+            "MD5": "0b6d0d24652f32ad692903f433d66e9e",
+            "path": "shaderpacks/Aurora's Shaders.zip"
+          }
+        },
+        {
+          "id": "Bliss_v2.1.2_(Chocapic13_Shaders_edit).zip",
+          "name": "Bliss_v2.1.2_(Chocapic13_Shaders_edit).zip",
+          "type": "File",
+          "artifact": {
+            "size": 1791406,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/Bliss_v2.1.2_(Chocapic13_Shaders_edit).zip",
+            "MD5": "73eac5d017a268ea8175c2025c2863ad",
+            "path": "shaderpacks/Bliss_v2.1.2_(Chocapic13_Shaders_edit).zip"
+          }
+        },
+        {
+          "id": "BSL_v10.1.5.zip",
+          "name": "BSL_v10.1.5.zip",
+          "type": "File",
+          "artifact": {
+            "size": 1133936,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/BSL_v10.1.5.zip",
+            "MD5": "f1f6a07f62cf668b17c333d4c80b6f6f",
+            "path": "shaderpacks/BSL_v10.1.5.zip"
+          }
+        },
+        {
+          "id": "ComplementaryUnbound_r5.8.1.zip",
+          "name": "ComplementaryUnbound_r5.8.1.zip",
+          "type": "File",
+          "artifact": {
+            "size": 546928,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/ComplementaryUnbound_r5.8.1.zip",
+            "MD5": "0a3553109dbe689a9f76d1aedc8f50c6",
+            "path": "shaderpacks/ComplementaryUnbound_r5.8.1.zip"
+          }
+        },
+        {
+          "id": "Fantasy Shaders Unbound v1.1.zip",
+          "name": "Fantasy Shaders Unbound v1.1.zip",
+          "type": "File",
+          "artifact": {
+            "size": 492947,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/Fantasy%20Shaders%20Unbound%20v1.1.zip",
+            "MD5": "cd4dbd3d2bfb049ccfbd8533821a279c",
+            "path": "shaderpacks/Fantasy Shaders Unbound v1.1.zip"
+          }
+        },
+        {
+          "id": "FastPBR_v2.0.zip",
+          "name": "FastPBR_v2.0.zip",
+          "type": "File",
+          "artifact": {
+            "size": 1118279,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/FastPBR_v2.0.zip",
+            "MD5": "8fa3ed95db13562ba00218dcdf785520",
+            "path": "shaderpacks/FastPBR_v2.0.zip"
+          }
+        },
+        {
+          "id": "Hysteria-Shaders-Universal-v1.2.1.zip",
+          "name": "Hysteria-Shaders-Universal-v1.2.1.zip",
+          "type": "File",
+          "artifact": {
+            "size": 1578052,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/Hysteria-Shaders-Universal-v1.2.1.zip",
+            "MD5": "9cd9d2b33532f1774f7465e76b92a4e3",
+            "path": "shaderpacks/Hysteria-Shaders-Universal-v1.2.1.zip"
+          }
+        },
+        {
+          "id": "Insanity-Shader-Universal-v1.650.zip",
+          "name": "Insanity-Shader-Universal-v1.650.zip",
+          "type": "File",
+          "artifact": {
+            "size": 1037373,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/Insanity-Shader-Universal-v1.650.zip",
+            "MD5": "97a61aad0133f120e536a420b92d4e88",
+            "path": "shaderpacks/Insanity-Shader-Universal-v1.650.zip"
+          }
+        },
+        {
+          "id": "Just Colored Lighting (1.0.1).zip",
+          "name": "Just Colored Lighting (1.0.1).zip",
+          "type": "File",
+          "artifact": {
+            "size": 306574,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/Just%20Colored%20Lighting%20(1.0.1).zip",
+            "MD5": "5bb97115b4e4c0ee83f95a3108bdb3bb",
+            "path": "shaderpacks/Just Colored Lighting (1.0.1).zip"
+          }
+        },
+        {
+          "id": "photon_v1.3b.zip",
+          "name": "photon_v1.3b.zip",
+          "type": "File",
+          "artifact": {
+            "size": 3800987,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/photon_v1.3b.zip",
+            "MD5": "6360159abc1bdd417ef8b40abc70e080",
+            "path": "shaderpacks/photon_v1.3b.zip"
+          }
+        },
+        {
+          "id": "RenderPearl v2.8.0-beta.4.zip",
+          "name": "RenderPearl v2.8.0-beta.4.zip",
+          "type": "File",
+          "artifact": {
+            "size": 671087,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/RenderPearl%20v2.8.0-beta.4.zip",
+            "MD5": "a58b23151e564c2b7cc33ac0f7b7e718",
+            "path": "shaderpacks/RenderPearl v2.8.0-beta.4.zip"
+          }
+        },
+        {
+          "id": "Spooklementary_v2.0.4.zip",
+          "name": "Spooklementary_v2.0.4.zip",
+          "type": "File",
+          "artifact": {
+            "size": 558206,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/Spooklementary_v2.0.4.zip",
+            "MD5": "43e1f181fc71dfbfa5cc4ed87641cc64",
+            "path": "shaderpacks/Spooklementary_v2.0.4.zip"
+          }
+        },
+        {
+          "id": "superDuperVanilla.zip",
+          "name": "superDuperVanilla.zip",
+          "type": "File",
+          "artifact": {
+            "size": 2851664,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/superDuperVanilla.zip",
+            "MD5": "00b068ef8600472d52da2c10aab68cb9",
+            "path": "shaderpacks/superDuperVanilla.zip"
+          }
+        },
+        {
+          "id": "§r§lAstra§4§lLex§r§l_By_LexBoosT_§4§lV93.0§r§l.zip",
+          "name": "§r§lAstra§4§lLex§r§l_By_LexBoosT_§4§lV93.0§r§l.zip",
+          "type": "File",
+          "artifact": {
+            "size": 3184524,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula_paradis/main/servers/eclipse-1.21.1/files/shaderpacks/%C2%A7r%C2%A7lAstra%C2%A74%C2%A7lLex%C2%A7r%C2%A7l_By_LexBoosT_%C2%A74%C2%A7lV93.0%C2%A7r%C2%A7l.zip",
+            "MD5": "021c95bd3d217b4a7e45997d5127285b",
+            "path": "shaderpacks/§r§lAstra§4§lLex§r§l_By_LexBoosT_§4§lV93.0§r§l.zip"
+          }
+        }
+      ]
+    }
+  ]
+}
