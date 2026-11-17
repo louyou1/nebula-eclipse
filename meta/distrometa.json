@@ -1,5 +1,5 @@
 {
-  "$schema": "file:///G:/Github/Nebula/schemas/DistroMetaSchema.schema.json",
+  "$schema": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/schemas/DistroMetaSchema.schema.json",
   "meta": {
     "rss": "",
     "discord": null

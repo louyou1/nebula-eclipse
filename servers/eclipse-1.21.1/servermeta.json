@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/schemas/ServerMetaSchema.schema.json",
   "$schema": "file:///G:/Github/Nebula/schemas/ServerMetaSchema.schema.json",
   "meta": {
     "version": "1.0.0",

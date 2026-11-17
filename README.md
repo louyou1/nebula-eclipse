@@ -13,7 +13,7 @@ Generate a distribution.json for Helios. Documentation on this format can be fou
 
 1. Clone the repository
 2. Install the dependencies (`npm i`)
-3. Create a file called [`.env`][dotenvnpm] at the root directory of the cloned folder and set the required values.
+3. Copy `.env.example` to `.env` at the root of the cloned folder, then set `ROOT` and `JAVA_EXECUTABLE` for your computer.
 
 Example
 ```properties
