@@ -7,8 +7,8 @@ import { UntrackedFilesOption } from '../../../model/nebula/ServerMeta.js'
 import { ToggleableModuleStructure } from './ToggleableModule.struct.js'
 
 /**
- * Creates toggleable NeoForge jar modules stored outside the live mods/ directory.
- * The launcher copies only enabled modules into mods/ immediately before launch.
+ * Creates toggleable NeoForge jar modules. Type.ForgeMod keeps their files in the
+ * launcher's common modstore; only enabled jars are copied into the instance mods/ folder.
  */
 export class NeoForgeModStructure extends ToggleableModuleStructure {
 
@@ -25,7 +25,7 @@ export class NeoForgeModStructure extends ToggleableModuleStructure {
             'neoforgemods',
             baseUrl,
             minecraftVersion,
-            Type.File,
+            Type.ForgeMod,
             untrackedFiles,
             (name: string) => name.toLowerCase().endsWith('.jar')
         )
@@ -36,8 +36,15 @@ export class NeoForgeModStructure extends ToggleableModuleStructure {
     }
 
     protected async getModuleId(name: string, _path: string): Promise<string> {
-        const stablePath = `${this.getActiveNamespace()}/${name}`
-        return `neoforge-mod-${Buffer.from(stablePath).toString('base64url')}`
+        const fileName = name.replace(/\.jar$/i, '')
+        const versionMatch = /^(.+?)[-_ ]v?(\d+(?:\.\d+){1,3}(?:[-+][a-zA-Z0-9.+_-]+)?)$/i.exec(fileName)
+        const artifactName = versionMatch?.[1] ?? fileName
+        const artifact = artifactName
+            .toLowerCase()
+            .replace(/[^a-z0-9._-]+/g, '-')
+            .replace(/^-+|-+$/g, '') || 'mod'
+        const version = (versionMatch?.[2] ?? '1.0.0').replace(/[^a-zA-Z0-9.+_-]+/g, '-')
+        return this.generateMavenIdentifier('eclipse.neoforge', artifact, version)
     }
 
     protected async getModuleName(name: string, _path: string): Promise<string> {
@@ -49,6 +56,6 @@ export class NeoForgeModStructure extends ToggleableModuleStructure {
     }
 
     protected async getModulePath(name: string, _path: string, _stats: Stats): Promise<string | null> {
-        return join('neoforge-mods', this.getActiveNamespace(), name).replace(/\\/g, '/')
+        return null
     }
 }

@@ -71,25 +71,31 @@ export class NeoForgeResolver extends BaseResolver {
         const repo = this.repoStructure
         const versionRepo = repo.getVersionRepoStruct()
         const libraryRepo = repo.getLibRepoStruct()
-        const versionManifestPath = versionRepo.getVersionManifest(this.minecraftVersion, `neoforge-${this.neoForgeVersion}`)
-        const versionManifestUrl = versionRepo.getVersionManifestURL(this.baseUrl, this.minecraftVersion, `neoforge-${this.neoForgeVersion}`)
+        const versionManifestPath = versionRepo.getVersionManifest(this.minecraftVersion, this.neoForgeVersion)
+        const versionManifestUrl = versionRepo.getVersionManifestURL(this.baseUrl, this.minecraftVersion, this.neoForgeVersion)
+        const installerId = `net.neoforged:neoforge:${this.neoForgeVersion}:installer`
+        const installerPath = libraryRepo.getArtifactById(installerId)
+        if (this.invalidateCache || !await libraryRepo.artifactExists(installerPath)) {
+            const cachedInstallerPath = join(repo.getCacheDirectory(), 'neoforge', `${this.neoForgeVersion}-installer.jar`)
+            if (!this.invalidateCache && await pathExists(cachedInstallerPath)) {
+                await mkdirs(dirname(installerPath))
+                await writeFile(installerPath, await readFile(cachedInstallerPath))
+            } else {
+                const installerUrl = new URL(
+                    MavenUtil.mavenIdentifierAsPath(installerId),
+                    NeoForgeResolver.REMOTE_REPOSITORY
+                ).toString()
+                NeoForgeResolver.logger.info(`Downloading NeoForge ${this.neoForgeVersion} installer..`)
+                const response = await got.get(installerUrl, { responseType: 'buffer' })
+                await mkdirs(dirname(installerPath))
+                await writeFile(installerPath, response.body)
+            }
+        }
 
         let versionManifestBuffer: Buffer
         if (!this.invalidateCache && await pathExists(versionManifestPath)) {
             versionManifestBuffer = await readFile(versionManifestPath)
         } else {
-            const installerPath = join(repo.getCacheDirectory(), 'neoforge', `${this.neoForgeVersion}-installer.jar`)
-            await mkdirs(dirname(installerPath))
-            if (this.invalidateCache || !await pathExists(installerPath)) {
-                const installerUrl = new URL(
-                    `net/neoforged/neoforge/${this.neoForgeVersion}/neoforge-${this.neoForgeVersion}-installer.jar`,
-                    NeoForgeResolver.REMOTE_REPOSITORY
-                ).toString()
-                NeoForgeResolver.logger.info(`Downloading NeoForge ${this.neoForgeVersion} installer..`)
-                const response = await got.get(installerUrl, { responseType: 'buffer' })
-                await writeFile(installerPath, response.body)
-            }
-
             const archive = new StreamZip.async({ file: installerPath })
             try {
                 const entry = await archive.entry('version.json')
@@ -125,6 +131,30 @@ export class NeoForgeResolver extends BaseResolver {
             )
         }
 
+        // The official installer creates the patched client jar locally. Keep the
+        // installer in Helios' common library store so the launcher can run that
+        // processor once without bundling Mojang's transformed client jar in Git.
+        const installerBuffer = await readFile(installerPath)
+        const installerComponents = MavenUtil.getMavenComponents(installerId)
+        const installerModule: Module = {
+            id: installerId,
+            name: 'NeoForge (client installer)',
+            type: Type.Library,
+            classpath: false,
+            artifact: this.generateArtifact(
+                installerBuffer,
+                await lstat(installerPath),
+                libraryRepo.getArtifactUrlByComponents(
+                    this.baseUrl,
+                    installerComponents.group,
+                    installerComponents.artifact,
+                    installerComponents.version,
+                    installerComponents.classifier,
+                    installerComponents.extension
+                )
+            )
+        }
+
         const universalId = `net.neoforged:neoforge:${this.neoForgeVersion}:universal`
         const universalPath = libraryRepo.getArtifactById(universalId)
         if (this.invalidateCache || !await libraryRepo.artifactExists(universalPath)) {
@@ -149,7 +179,7 @@ export class NeoForgeResolver extends BaseResolver {
                     universalComponents.extension
                 )
             ),
-            subModules: [versionManifestModule]
+            subModules: [versionManifestModule, installerModule]
         }
 
         const libraryModules: Module[] = []
