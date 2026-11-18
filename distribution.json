@@ -531,13 +531,13 @@
           }
         },
         {
-          "id": "eclipse.neoforge:xaerominimap-forge:26.3-26.6.2@jar",
-          "name": "xaerominimap-forge-26.3-26.6.2",
+          "id": "eclipse.neoforge:xaerominimap-neoforge:1.21.1-26.6.0@jar",
+          "name": "xaerominimap-neoforge-1.21.1-26.6.0",
           "type": "ForgeMod",
           "artifact": {
-            "size": 2180990,
-            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/required/xaerominimap-forge-26.3-26.6.2.jar",
-            "MD5": "016944390f543ee0db928504a3b8a7bf"
+            "size": 2186351,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/required/xaerominimap-neoforge-1.21.1-26.6.0.jar",
+            "MD5": "df7a17ba8e9140f9db5a9225a4de2ae6"
           }
         },
         {
@@ -548,6 +548,60 @@
             "size": 1427078,
             "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/required/xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
             "MD5": "2a41efd48f6503926b089a00e624f1d0"
+          }
+        },
+        {
+          "id": "eclipse.neoforge:sophisticatedbackpacks:1.21.1-3.26.21.2249@jar",
+          "name": "sophisticatedbackpacks-1.21.1-3.26.21.2249",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1265683,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/optionalon/sophisticatedbackpacks-1.21.1-3.26.21.2249.jar",
+            "MD5": "31c71b2772449f01c130acad01fb60cf"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "eclipse.neoforge:sophisticatedcore:1.21.1-1.5.38.2484@jar",
+          "name": "sophisticatedcore-1.21.1-1.5.38.2484",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1855172,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/optionalon/sophisticatedcore-1.21.1-1.5.38.2484.jar",
+            "MD5": "aca33a21c6d78126ac3ddc57cf73cb60"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "eclipse.neoforge:justzoom_neoforge_3.1.0_mc:1.21.1@jar",
+          "name": "justzoom_neoforge_3.1.0_MC_1.21.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 168109,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/optionaloff/justzoom_neoforge_3.1.0_MC_1.21.1.jar",
+            "MD5": "8aa471f97d4be399e8eca013f3cf3766"
+          },
+          "required": {
+            "value": false,
+            "def": false
+          }
+        },
+        {
+          "id": "eclipse.neoforge:konkrete_neoforge_1.9.9_mc:1.21@jar",
+          "name": "konkrete_neoforge_1.9.9_MC_1.21",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 618842,
+            "url": "https://raw.githubusercontent.com/louyou1/nebula-eclipse/main/servers/eclipse-1.21.1/neoforgemods/optionaloff/konkrete_neoforge_1.9.9_MC_1.21.jar",
+            "MD5": "6e77d08299ea1ec7756a299263bc469b"
+          },
+          "required": {
+            "value": false,
+            "def": false
           }
         }
       ]
